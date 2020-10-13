@@ -1,0 +1,63 @@
+
+h4 {
+    background: #2d738e;
+    text-align: center;
+    color: #fff;
+    margin-top: 0px;
+    border-radius: 3px 3px 0 0;
+    padding: 10px 0;
+}
+
+form {
+    max-width: 400px;
+    margin: 200px auto;
+    background: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 5px 5px 7px 0px #00000085;
+    border-radius: 3px;
+}
+
+input {
+    width: 85%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 5px;
+    border-radius: 3px;
+    outline: none;
+    border: 1px solid #ccc;
+}
+button {
+    margin: auto;
+    width: 20%;
+    display: block;
+    margin-bottom: 10px;
+    background: #2d738e;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    color: #fff;
+    padding: 3px;
+}
+.notification {
+    width: 100%;
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+a {
+    font-size: 14px;
+    margin-bottom: 22px;
+    display: block;
+    margin-left: 280px;
+    text-decoration: none;
+}
+
+input[type="checkbox"] {
+    margin: 1px 12px;
+    position: absolute;
+}
+
+label {
+    position: absolute;
+    margin: -1px 31px;
+}
