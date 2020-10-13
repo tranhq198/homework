@@ -18,10 +18,43 @@ b) Create a MySQL query that will grab the top 5 most popular English-speaking n
 • Canada
  */
 
-"SELECT Countries.name 
-    FROM Countries LEFT JOIN CountriesLanguages 
-    ON (Countries.code = CountriesLanguages.country_code) 
-    ORDER BY CountriesLanguages.percentage DESC
+$server_username = "root";
+$server_password = "";
+$server_host = "localhost";
+$database = 'world-database';
+
+$conn = mysqli_connect($server_host, $server_username, $server_password, $database);
+mysqli_query($conn, "SET NAMES 'UTF8'");
+
+$sql = "SELECT `name` FROM `cities` WHERE population > 500000;";
+$result = mysqli_query($conn, $sql);
+if (mysqli_num_rows($result) > 0)
+{
+    echo "Result (part a): "."<br>"."<br>";
+    while($row = mysqli_fetch_assoc($result)) {
+        echo $row["name"]."<br>";
+    }
+}
+else {
+    echo "Không có record nào";
+}
+
+
+//b
+$sql = "SELECT countries.name 
+    FROM countries LEFT JOIN countrieslanguages 
+    ON (countries.code = countrieslanguages.countryCode) 
+    ORDER BY countrieslanguages.percentage
     LIMIT 5";
+$result = mysqli_query($conn, $sql);
 
-
+if (mysqli_num_rows($result) > 0)
+{
+    echo "Result (part a): "."<br>"."<br>";
+    while($row = mysqli_fetch_assoc($result)) {
+        echo $row["name"]."<br>";
+    }
+}
+else {
+    echo "Không có record nào";
+}
