@@ -6,7 +6,7 @@
         <input type="text" placeholder="username" name="username" value="<?php if(isset($_COOKIE['user'])) echo $_COOKIE['user']; ?>">
         <input type="password" placeholder="password" name="password" value="<?php if(isset($_COOKIE['pass'])) echo $_COOKIE['pass']; ?>">
         <button name="submit">Login</button>
-        <input type="checkbox" name="savePass" value="<?php if(isset($_COOKIE['user'])) echo "checked"; ?>"><label for="">Save password</label>
+        <input id="checkbox" type="checkbox" name="savePass" value="<?php if(isset($_COOKIE['user'])) echo "checked"; ?>"><label for="checkbox">Save password</label>
         <a href="change-password.php">Change Password ?</a>
     </form>
 </div>
