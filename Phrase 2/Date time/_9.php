@@ -11,5 +11,5 @@ function factorial_of_a_number($n)
         return $factorial *= $i;
     }
 }
-print_r(factorial_of_a_number(4)."\n");
+var_dump(factorial_of_a_number(4)."\n");
 
